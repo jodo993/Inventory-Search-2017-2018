@@ -62,13 +62,12 @@
             this.addUnknownButton = new System.Windows.Forms.Button();
             this.addButton = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.addFailedLabel = new System.Windows.Forms.Label();
             this.noButton = new System.Windows.Forms.Button();
-            this.addSuccessfulLabel = new System.Windows.Forms.Label();
             this.yesButton = new System.Windows.Forms.Button();
             this.addVerifyLabel = new System.Windows.Forms.Label();
             this.addLocationComboBox = new System.Windows.Forms.ComboBox();
             this.addClearButton = new System.Windows.Forms.Button();
+            this.label11 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -380,9 +379,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.addFailedLabel);
             this.groupBox1.Controls.Add(this.noButton);
-            this.groupBox1.Controls.Add(this.addSuccessfulLabel);
             this.groupBox1.Controls.Add(this.yesButton);
             this.groupBox1.Controls.Add(this.addVerifyLabel);
             this.groupBox1.Location = new System.Drawing.Point(295, 244);
@@ -391,18 +388,6 @@
             this.groupBox1.TabIndex = 35;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Verification Box";
-            // 
-            // addFailedLabel
-            // 
-            this.addFailedLabel.AutoSize = true;
-            this.addFailedLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.addFailedLabel.Location = new System.Drawing.Point(53, 31);
-            this.addFailedLabel.Name = "addFailedLabel";
-            this.addFailedLabel.Size = new System.Drawing.Size(79, 17);
-            this.addFailedLabel.TabIndex = 37;
-            this.addFailedLabel.Text = "Add Failed.";
-            this.addFailedLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.addFailedLabel.Visible = false;
             // 
             // noButton
             // 
@@ -414,18 +399,6 @@
             this.noButton.UseVisualStyleBackColor = true;
             this.noButton.Visible = false;
             this.noButton.Click += new System.EventHandler(this.noButton_Click);
-            // 
-            // addSuccessfulLabel
-            // 
-            this.addSuccessfulLabel.AutoSize = true;
-            this.addSuccessfulLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.addSuccessfulLabel.Location = new System.Drawing.Point(37, 31);
-            this.addSuccessfulLabel.Name = "addSuccessfulLabel";
-            this.addSuccessfulLabel.Size = new System.Drawing.Size(108, 17);
-            this.addSuccessfulLabel.TabIndex = 36;
-            this.addSuccessfulLabel.Text = "Add Successful!";
-            this.addSuccessfulLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.addSuccessfulLabel.Visible = false;
             // 
             // yesButton
             // 
@@ -493,11 +466,20 @@
             this.addClearButton.UseVisualStyleBackColor = true;
             this.addClearButton.Click += new System.EventHandler(this.addClearButton_Click);
             // 
+            // label11
+            // 
+            this.label11.Location = new System.Drawing.Point(556, 73);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(122, 49);
+            this.label11.TabIndex = 38;
+            this.label11.Text = "For chromebook insertion, type = laptop, make = chromebook";
+            // 
             // AddInventoryForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(585, 379);
+            this.ClientSize = new System.Drawing.Size(704, 379);
+            this.Controls.Add(this.label11);
             this.Controls.Add(this.addClearButton);
             this.Controls.Add(this.addLocationComboBox);
             this.Controls.Add(this.groupBox1);
@@ -579,12 +561,11 @@
         private System.Windows.Forms.Button addUnknownButton;
         private System.Windows.Forms.Button addButton;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label addFailedLabel;
         private System.Windows.Forms.Button noButton;
-        private System.Windows.Forms.Label addSuccessfulLabel;
         private System.Windows.Forms.Button yesButton;
         private System.Windows.Forms.Label addVerifyLabel;
         private System.Windows.Forms.ComboBox addLocationComboBox;
         private System.Windows.Forms.Button addClearButton;
+        private System.Windows.Forms.Label label11;
     }
 }

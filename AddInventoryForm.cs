@@ -7,11 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace Webber_Inventory
 {
     public partial class AddInventoryForm : Form
     {
+        // Open connection to database
+        SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\josep\Documents\GeneralInventory.mdf;Integrated Security=True;Connect Timeout=30");
         public AddInventoryForm()
         {
             InitializeComponent();
@@ -109,9 +112,6 @@ namespace Webber_Inventory
 
         private void addButton_Click(object sender, EventArgs e)
         {
-            addSuccessfulLabel.Visible = false;
-            addFailedLabel.Visible = false;
-
             // Verify user choice
             addVerifyLabel.Visible = true;
             yesButton.Visible = true;
@@ -125,7 +125,15 @@ namespace Webber_Inventory
             yesButton.Visible = false;
             noButton.Visible = false;
 
-            addSuccessfulLabel.Visible = true;
+            // Write the information into the database
+            connection.Open();
+            SqlCommand command = connection.CreateCommand();
+            command.CommandType = CommandType.Text;
+            command.CommandText = "insert into GeneralInventoryTable values('" + addTypeTextBox.Text + "','" + addMakeTextBox.Text + "','" + addModelTextBox.Text + "','" + addTagTextBox.Text + "','" + addLocationComboBox.Text + "','" + addStatusTextBox.Text + "')";
+            command.ExecuteNonQuery();
+            connection.Close();
+
+            MessageBox.Show("Item was successfully added!");
         }
 
         private void noButton_Click(object sender, EventArgs e)
@@ -134,8 +142,6 @@ namespace Webber_Inventory
             addVerifyLabel.Visible = false;
             yesButton.Visible = false;
             noButton.Visible = false;
-
-            addFailedLabel.Visible = true;
         }
 
         private void addClearButton_Click(object sender, EventArgs e)
@@ -151,8 +157,6 @@ namespace Webber_Inventory
             addVerifyLabel.Visible = false;
             yesButton.Visible = false;
             noButton.Visible = false;
-            addSuccessfulLabel.Visible = false;
-            addFailedLabel.Visible = false;
         }
     }
 }
