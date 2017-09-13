@@ -42,9 +42,9 @@
             this.addAccessoriesButton = new System.Windows.Forms.Button();
             this.addMainMenuButton = new System.Windows.Forms.Button();
             this.addExitButton = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.addMakeTextBox = new System.Windows.Forms.TextBox();
+            this.addModelTextBox = new System.Windows.Forms.TextBox();
+            this.addTagTextBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -62,12 +62,13 @@
             this.addUnknownButton = new System.Windows.Forms.Button();
             this.addButton = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.addVerifyLabel = new System.Windows.Forms.Label();
-            this.yesButton = new System.Windows.Forms.Button();
+            this.addFailedLabel = new System.Windows.Forms.Label();
             this.noButton = new System.Windows.Forms.Button();
             this.addSuccessfulLabel = new System.Windows.Forms.Label();
-            this.addFailedLabel = new System.Windows.Forms.Label();
+            this.yesButton = new System.Windows.Forms.Button();
+            this.addVerifyLabel = new System.Windows.Forms.Label();
             this.addLocationComboBox = new System.Windows.Forms.ComboBox();
+            this.addClearButton = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -192,7 +193,7 @@
             // 
             // addMainMenuButton
             // 
-            this.addMainMenuButton.Location = new System.Drawing.Point(109, 316);
+            this.addMainMenuButton.Location = new System.Drawing.Point(28, 316);
             this.addMainMenuButton.Name = "addMainMenuButton";
             this.addMainMenuButton.Size = new System.Drawing.Size(75, 23);
             this.addMainMenuButton.TabIndex = 12;
@@ -202,7 +203,7 @@
             // 
             // addExitButton
             // 
-            this.addExitButton.Location = new System.Drawing.Point(190, 316);
+            this.addExitButton.Location = new System.Drawing.Point(109, 316);
             this.addExitButton.Name = "addExitButton";
             this.addExitButton.Size = new System.Drawing.Size(75, 23);
             this.addExitButton.TabIndex = 13;
@@ -210,26 +211,26 @@
             this.addExitButton.UseVisualStyleBackColor = true;
             this.addExitButton.Click += new System.EventHandler(this.addExitButton_Click);
             // 
-            // textBox1
+            // addMakeTextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(72, 119);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 14;
+            this.addMakeTextBox.Location = new System.Drawing.Point(72, 119);
+            this.addMakeTextBox.Name = "addMakeTextBox";
+            this.addMakeTextBox.Size = new System.Drawing.Size(100, 20);
+            this.addMakeTextBox.TabIndex = 14;
             // 
-            // textBox2
+            // addModelTextBox
             // 
-            this.textBox2.Location = new System.Drawing.Point(72, 149);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 15;
+            this.addModelTextBox.Location = new System.Drawing.Point(72, 149);
+            this.addModelTextBox.Name = "addModelTextBox";
+            this.addModelTextBox.Size = new System.Drawing.Size(100, 20);
+            this.addModelTextBox.TabIndex = 15;
             // 
-            // textBox3
+            // addTagTextBox
             // 
-            this.textBox3.Location = new System.Drawing.Point(72, 179);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 16;
+            this.addTagTextBox.Location = new System.Drawing.Point(72, 179);
+            this.addTagTextBox.Name = "addTagTextBox";
+            this.addTagTextBox.Size = new System.Drawing.Size(100, 20);
+            this.addTagTextBox.TabIndex = 16;
             // 
             // label3
             // 
@@ -369,7 +370,7 @@
             // 
             // addButton
             // 
-            this.addButton.Location = new System.Drawing.Point(26, 316);
+            this.addButton.Location = new System.Drawing.Point(28, 287);
             this.addButton.Name = "addButton";
             this.addButton.Size = new System.Drawing.Size(75, 23);
             this.addButton.TabIndex = 34;
@@ -391,26 +392,17 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Verification Box";
             // 
-            // addVerifyLabel
+            // addFailedLabel
             // 
-            this.addVerifyLabel.AutoSize = true;
-            this.addVerifyLabel.Location = new System.Drawing.Point(26, 26);
-            this.addVerifyLabel.Name = "addVerifyLabel";
-            this.addVerifyLabel.Size = new System.Drawing.Size(151, 13);
-            this.addVerifyLabel.TabIndex = 0;
-            this.addVerifyLabel.Text = "Are you sure you want to add?";
-            this.addVerifyLabel.Visible = false;
-            // 
-            // yesButton
-            // 
-            this.yesButton.Location = new System.Drawing.Point(40, 51);
-            this.yesButton.Name = "yesButton";
-            this.yesButton.Size = new System.Drawing.Size(53, 28);
-            this.yesButton.TabIndex = 1;
-            this.yesButton.Text = "Yes";
-            this.yesButton.UseVisualStyleBackColor = true;
-            this.yesButton.Visible = false;
-            this.yesButton.Click += new System.EventHandler(this.yesButton_Click);
+            this.addFailedLabel.AutoSize = true;
+            this.addFailedLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.addFailedLabel.Location = new System.Drawing.Point(53, 31);
+            this.addFailedLabel.Name = "addFailedLabel";
+            this.addFailedLabel.Size = new System.Drawing.Size(79, 17);
+            this.addFailedLabel.TabIndex = 37;
+            this.addFailedLabel.Text = "Add Failed.";
+            this.addFailedLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.addFailedLabel.Visible = false;
             // 
             // noButton
             // 
@@ -435,17 +427,26 @@
             this.addSuccessfulLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.addSuccessfulLabel.Visible = false;
             // 
-            // addFailedLabel
+            // yesButton
             // 
-            this.addFailedLabel.AutoSize = true;
-            this.addFailedLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.addFailedLabel.Location = new System.Drawing.Point(53, 31);
-            this.addFailedLabel.Name = "addFailedLabel";
-            this.addFailedLabel.Size = new System.Drawing.Size(79, 17);
-            this.addFailedLabel.TabIndex = 37;
-            this.addFailedLabel.Text = "Add Failed.";
-            this.addFailedLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.addFailedLabel.Visible = false;
+            this.yesButton.Location = new System.Drawing.Point(40, 51);
+            this.yesButton.Name = "yesButton";
+            this.yesButton.Size = new System.Drawing.Size(53, 28);
+            this.yesButton.TabIndex = 1;
+            this.yesButton.Text = "Yes";
+            this.yesButton.UseVisualStyleBackColor = true;
+            this.yesButton.Visible = false;
+            this.yesButton.Click += new System.EventHandler(this.yesButton_Click);
+            // 
+            // addVerifyLabel
+            // 
+            this.addVerifyLabel.AutoSize = true;
+            this.addVerifyLabel.Location = new System.Drawing.Point(26, 26);
+            this.addVerifyLabel.Name = "addVerifyLabel";
+            this.addVerifyLabel.Size = new System.Drawing.Size(151, 13);
+            this.addVerifyLabel.TabIndex = 0;
+            this.addVerifyLabel.Text = "Are you sure you want to add?";
+            this.addVerifyLabel.Visible = false;
             // 
             // addLocationComboBox
             // 
@@ -482,11 +483,22 @@
             this.addLocationComboBox.Size = new System.Drawing.Size(100, 21);
             this.addLocationComboBox.TabIndex = 36;
             // 
+            // addClearButton
+            // 
+            this.addClearButton.Location = new System.Drawing.Point(109, 287);
+            this.addClearButton.Name = "addClearButton";
+            this.addClearButton.Size = new System.Drawing.Size(75, 23);
+            this.addClearButton.TabIndex = 37;
+            this.addClearButton.Text = "Clear";
+            this.addClearButton.UseVisualStyleBackColor = true;
+            this.addClearButton.Click += new System.EventHandler(this.addClearButton_Click);
+            // 
             // AddInventoryForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(740, 379);
+            this.ClientSize = new System.Drawing.Size(585, 379);
+            this.Controls.Add(this.addClearButton);
             this.Controls.Add(this.addLocationComboBox);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.addButton);
@@ -505,9 +517,9 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.addTagTextBox);
+            this.Controls.Add(this.addModelTextBox);
+            this.Controls.Add(this.addMakeTextBox);
             this.Controls.Add(this.addExitButton);
             this.Controls.Add(this.addMainMenuButton);
             this.Controls.Add(this.addAccessoriesButton);
@@ -547,9 +559,9 @@
         private System.Windows.Forms.Button addAccessoriesButton;
         private System.Windows.Forms.Button addMainMenuButton;
         private System.Windows.Forms.Button addExitButton;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox addMakeTextBox;
+        private System.Windows.Forms.TextBox addModelTextBox;
+        private System.Windows.Forms.TextBox addTagTextBox;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
@@ -573,5 +585,6 @@
         private System.Windows.Forms.Button yesButton;
         private System.Windows.Forms.Label addVerifyLabel;
         private System.Windows.Forms.ComboBox addLocationComboBox;
+        private System.Windows.Forms.Button addClearButton;
     }
 }

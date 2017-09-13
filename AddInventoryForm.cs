@@ -137,5 +137,22 @@ namespace Webber_Inventory
 
             addFailedLabel.Visible = true;
         }
+
+        private void addClearButton_Click(object sender, EventArgs e)
+        {
+            // Clear all fields
+            addTypeTextBox.Text = "";
+            addMakeTextBox.Text = "";
+            addModelTextBox.Text = "";
+            addTagTextBox.Text = "";
+            addLocationComboBox.Text = "";
+            addStatusTextBox.Text = "";
+
+            addVerifyLabel.Visible = false;
+            yesButton.Visible = false;
+            noButton.Visible = false;
+            addSuccessfulLabel.Visible = false;
+            addFailedLabel.Visible = false;
+        }
     }
 }
